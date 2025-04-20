@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://dej1frjaj4blj"]
+
+[ext_resource type="FontFile" uid="uid://ma30uwk3blcx" path="res://assets/fonts/PixelOperator8.ttf" id="2_7ig57"]
+
+[sub_resource type="GDScript" id="GDScript_7ytl0"]
+script/source = "extends Node2D
+
+@onready var timer: Timer = $timer
+@onready var game_time: Label = $\"game time\"
+var total_time_seconds = 0
+
+func _ready() -> void:
+	timer.start()
+
+
+func _on_timer_timeout() -> void:
+	print(total_time_seconds)
+	total_time_seconds += 1
+	
+	game_time.text = \"Time: \" + str(total_time_seconds)
+"
+
+[node name="onscreentimer" type="Node2D"]
+script = SubResource("GDScript_7ytl0")
+
+[node name="timerlabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_7ig57")
+text = "Time: 0"
+metadata/_edit_use_anchors_ = true
+
+[node name="timer" type="Timer" parent="."]

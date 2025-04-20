@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://deabgpd4etov"]
+
+[ext_resource type="FontFile" uid="uid://ma30uwk3blcx" path="res://assets/fonts/PixelOperator8.ttf" id="1_st4s3"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_u8kd1"]
+[ext_resource type="Script" path="res://scripts/start-button.gd" id="3_fdby1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ptbh0"]
+bg_color = Color(0, 0, 0.803922, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v8wa4"]
+bg_color = Color(0.871502, 0.650653, 0.14564, 1)
+
+[node name="Main-Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u8kd1")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_st4s3")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_ptbh0")
+text = "Welcome to It's A Long Way Duck!
+Controls:
+Spacebar / W - Jump
+A / Left - Walk Left
+D / Right - Walk Right
+
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="start-button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -171.0
+offset_top = 478.0
+offset_right = 172.0
+offset_bottom = -81.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_st4s3")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_v8wa4")
+text = "Start Game"
+script = ExtResource("3_fdby1")
+
+[connection signal="pressed" from="start-button" to="." method="_on_start_button_pressed"]
