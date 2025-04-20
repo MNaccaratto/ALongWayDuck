@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3choqmn6dg13"]
+[gd_scene load_steps=7 format=3 uid="uid://c3choqmn6dg13"]
 
 [ext_resource type="Script" path="res://scripts/end_screen.gd" id="1_2ngry"]
 [ext_resource type="FontFile" uid="uid://ma30uwk3blcx" path="res://assets/fonts/PixelOperator8.ttf" id="2_2noeg"]
@@ -6,6 +6,10 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_irrbs"]
 bg_color = Color(0, 0, 0.803922, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ka8ad"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w4mrs"]
 
 [node name="end-screen" type="Control"]
 layout_mode = 3
@@ -49,6 +53,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_2noeg")
 theme_override_font_sizes/font_size = 31
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ka8ad")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_w4mrs")
 text = "Play Again?"
 script = ExtResource("3_obop1")
 

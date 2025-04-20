@@ -1,3 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+.DS_Store
+ALongWayDuck.arm64
+ALongWayDuck.sh
+arm_shell.zip
