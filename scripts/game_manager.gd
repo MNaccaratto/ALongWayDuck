@@ -12,3 +12,6 @@ func add_score(number: int) -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("exit"):
 		get_tree().quit()
+
+func get_score():
+	return score
