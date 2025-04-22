@@ -5,9 +5,10 @@ extends Control
 func _ready() -> void:
 	end_screen_label.text = "You made it to the top!\nGood Work!\n\n\n"
 
-func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("ui_accept"):
+		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+		
 	if Input.is_action_just_pressed("exit"):
 		get_tree().quit()

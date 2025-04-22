@@ -1,15 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://deabgpd4etov"]
+[gd_scene load_steps=4 format=3 uid="uid://deabgpd4etov"]
 
 [ext_resource type="FontFile" uid="uid://ma30uwk3blcx" path="res://assets/fonts/PixelOperator8.ttf" id="1_st4s3"]
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_u8kd1"]
-[ext_resource type="Script" path="res://scripts/start-button.gd" id="3_fdby1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ptbh0"]
 bg_color = Color(0, 0, 0.803922, 1)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_atblk"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qcs0k"]
 
 [node name="Main-Menu" type="Control"]
 layout_mode = 3
@@ -43,25 +38,3 @@ Press Y / Enter to begin!
 "
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="start-button" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -171.0
-offset_top = 405.0
-offset_right = 172.0
-offset_bottom = -154.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("1_st4s3")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/focus = SubResource("StyleBoxEmpty_atblk")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_qcs0k")
-text = "Start Game"
-script = ExtResource("3_fdby1")
-metadata/_edit_use_anchors_ = true
-
-[connection signal="pressed" from="start-button" to="." method="_on_start_button_pressed"]
