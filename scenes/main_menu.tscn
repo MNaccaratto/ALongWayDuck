@@ -27,11 +27,11 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_ptbh0")
 text = "Welcome to It's A Long Way Duck!
 Controls:
-Spacebar / W / Controller A - Jump
+Spacebar / W / Controller B - Jump
 A / Left - Walk Left
 D / Right - Walk Right
 
-Press Y / Enter to begin!
+Press X / Enter to begin!
 "
 horizontal_alignment = 1
 vertical_alignment = 1
